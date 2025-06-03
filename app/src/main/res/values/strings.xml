@@ -15,4 +15,8 @@
     <string name="title_logout">Log Out</string>
     <string name="navigation_drawer_open">Open drawer</string>
     <string name="navigation_drawer_close">Close drawer</string>
+    <string name="title_navigation_shop">Shop</string>
+    <string name="title_navigation_schedule">Schedule</string>
+    <string name="title_navigation_news">News</string>
+    <string name="title_navigation_profile">Profile</string>
 </resources>

@@ -4,12 +4,9 @@ import android.os.Build;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 
-import androidx.core.content.ContextCompat;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.core.view.GravityCompat;
-import androidx.core.view.ViewCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
@@ -25,7 +22,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -46,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         drawerLayout = findViewById(R.id.drawer_layout);
-        fab = findViewById(R.id.fab);
+        fab = findViewById(R.id.btnMainScan);
         NavigationView navigationView = findViewById(R.id.nav_view);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -56,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(false);
 
         // Lấy nút menu từ toolbar
-        ImageButton btnMenu = toolbar.findViewById(R.id.btn_menu);
+        ImageButton btnMenu = toolbar.findViewById(R.id.btnMainMenu);
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
 
             int id = item.getItemId();
 
-            if (id == R.id.shop) {
+            if (id == R.id.txtNavigationShop) {
                 replaceFragment(new ShopActivity());
-            } else if (id == R.id.schedule) {
+            } else if (id == R.id.txtNavigationSchedule) {
                 replaceFragment(new ScheduleActivity());
-            } else if (id == R.id.news) {
+            } else if (id == R.id.txtNavigationNews) {
                 replaceFragment(new NewsActivity());
-            } else if (id == R.id.profile) {
+            } else if (id == R.id.txtNavigationProfile) {
                 replaceFragment(new ProfileActivity());
             }
 

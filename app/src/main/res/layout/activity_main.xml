@@ -29,7 +29,7 @@
                 android:layout_height="match_parent">
                 <!--  Nút menu bên trái  -->
                 <ImageButton
-                    android:id="@+id/btn_menu"
+                    android:id="@+id/btnMainMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
@@ -38,7 +38,7 @@
                     android:src="@mipmap/ic_hamburger"
                     android:tint="#847c4a"/>
                 <!--  Logo căn giữa  -->
-                <ImageView android:id="@+id/logo"
+                <ImageView android:id="@+id/imgMainLogo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -78,7 +78,7 @@
                         app:menu="@menu/bottom_menu"/>
                 </com.google.android.material.bottomappbar.BottomAppBar>
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/fab"
+                    android:id="@+id/btnMainScan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#F7F6F2"

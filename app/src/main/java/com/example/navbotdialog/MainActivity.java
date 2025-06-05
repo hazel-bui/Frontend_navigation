@@ -25,6 +25,7 @@ import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.FragmentManager;
@@ -39,12 +40,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        NavigationView navigationView = findViewById(R.id.layoutMainNavigationView);
+        // Lấy View header của NavigationView
+        View headerView = navigationView.getHeaderView(0);
 
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        drawerLayout = findViewById(R.id.drawer_layout);
+        // Truy cập 2 TextView trong nav_header.xml
+        TextView txtNavigationName = headerView.findViewById(R.id.txtNavigationName);
+        TextView txtNavigationEmail = headerView.findViewById(R.id.txtNavigationEmail);
+
+        // Truyền dữ liệu từ Java
+        txtNavigationName.setText("Rebound Piercing Vietnam");
+        txtNavigationEmail.setText("contact@rebound.vn");
+
+        bottomNavigationView = findViewById(R.id.layoutMainBottomNavigationView);
+        drawerLayout = findViewById(R.id.layoutMainDrawer);
         fab = findViewById(R.id.btnMainScan);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.layoutMainToolbar);
         setSupportActionBar(toolbar);
 
         // Bỏ dòng này nếu không cần icon mặc định (vì ta dùng nút custom)
@@ -69,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (savedInstanceState == null){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new ShopActivity()).commit();
-            navigationView.setCheckedItem(R.id.nav_home);
+            getSupportFragmentManager().beginTransaction().replace(R.id.layoutMainFrame, new ShopActivity()).commit();
+            navigationView.setCheckedItem(R.id.txtNavigationHome);
         }
 
         replaceFragment(new ShopActivity());
@@ -106,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.replace(R.id.layoutMainFrame, fragment);
         fragmentTransaction.commit();
     }
 

@@ -11,7 +11,7 @@
         android:title="@string/title_navigation_schedule" />
 
     <item
-        android:id="@+id/scan_placeholder"
+        android:id="@+id/txtNavigationBlank"
         android:enabled="false"
         android:icon="@drawable/ic_transparent"
         android:title=""

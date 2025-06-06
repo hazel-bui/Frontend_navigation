@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.layoutMainBottomNavigationView);
         drawerLayout = findViewById(R.id.layoutMainDrawer);
-        fab = findViewById(R.id.btnMainScan);
+        fab = findViewById(R.id.imgMainButtonScan);
         Toolbar toolbar = findViewById(R.id.layoutMainToolbar);
         setSupportActionBar(toolbar);
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(false);
 
         // Lấy nút menu từ toolbar
-        ImageButton btnMenu = toolbar.findViewById(R.id.btnMainMenu);
+        ImageButton btnMenu = toolbar.findViewById(R.id.imgMainButtonMenu);
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

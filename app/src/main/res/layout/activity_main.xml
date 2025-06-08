@@ -91,14 +91,13 @@
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
         </FrameLayout>
     </LinearLayout>
+
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/layoutMainNavigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/layoutMainNavigationView"
         android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu"
-        app:itemTextAppearance="@style/MenuTextAppearance"
         app:itemIconTint="#847c4a"
-        app:itemTextColor="#847c4a"/>
+        app:itemTextAppearance="@style/MenuTextAppearance"
+        app:itemTextColor="#847c4a" />
 </androidx.drawerlayout.widget.DrawerLayout>
